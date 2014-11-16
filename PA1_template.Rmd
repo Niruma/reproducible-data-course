@@ -33,5 +33,12 @@ library(plyr)
 library(Hmisc)
 imputed_activity <- activity
 imputed_activity$steps <- with(imputed_activity, impute(steps, mean))
+total_imputed <- tapply(imputed_activity$steps, 
+                              imputed_activity$date, sum)
+mean(total_steps)
+mean(total_imputed)
+median(total_steps)
+median(total_imputed)
+qplot(total_imputed, xlab='Total steps')
 ```
 
