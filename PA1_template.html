@@ -58,7 +58,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </div>
 
 
-<p>This is an R Markdown document. The first step is to read the file and create a histogram of the total number of steps taken each day #These steps show loading and initial processing of data library(knitr) setwd(“~/R/R_lectures/Data_cousera/reproducible/) knit2html(”PA1_template.Rmd“) browseURL(”PA1_template.html“)</p>
+<p>This is an R Markdown document. The first step is to read the file and create a histogram of the total number of steps taken each day #These steps show loading and initial processing of data library(knitr) setwd(“~/R/R_lectures/Data_cousera/reproducible/) keep_md = TRUE in html_document() knit2html(”PA1_template.Rmd“) browseURL(”PA1_template.html“)</p>
 <pre class="r"><code>activity &lt;- read.csv(&quot;~/R/R_lectures/Data_cousera/reproducible/activity.csv&quot;)
 activity$date &lt;- as.Date(activity[,2], format=&quot;%m/%d/%Y&quot;)</code></pre>
 <div id="ignoring-the-missing-values-a-histogram-of-the-total-number-of-steps-taken-each-day-has-been-created" class="section level1">
