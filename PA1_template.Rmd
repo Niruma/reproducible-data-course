@@ -2,16 +2,19 @@
 title: "peer_assessment"
 author: "Student"
 date: "Friday, November 14, 2014"
-output: word_document
+output: html_document
 ---
 
 This is an R Markdown document. The first step is to read the file and create a histogram of the total number of steps taken each day
 #These steps show loading and initial processing of data
+```{r, echo=TRUE}
 library(knitr)
 setwd("~/R/R_lectures/Data_cousera/reproducible/)
-keep_md = TRUE in html_document()
-knit2html("PA1_template.Rmd")
-browseURL("PA1_template.html")
+      name = "PA1_template"
+library(knitr)
+knit(paste0(PA1_template, ".Rmd"), encoding = "utf-8")
+system(paste0("pandoc -o ", PA1_template, ".docx ", PA1_template, ".md"))
+```
 
 ```{r, echo=TRUE}
 activity <- read.csv("~/R/R_lectures/Data_cousera/reproducible/activity.csv")
